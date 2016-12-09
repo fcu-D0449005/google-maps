@@ -99,13 +99,13 @@
 										<header>
 											<h1>人口密度分佈圖<br />
 											by 第N組</h1>
-                                             <p> 輸入欲查詢的地址<input id="address" type="text" size="50" value="">   <input type="button" value="查經緯度並在地圖上顯示" onClick="codeAddress()"> </p>
-											<p>A free and fully responsive site template</p>
+                                          
+											<p>一個87的應用程式</p>
 										</header>
-										<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor sit nullam.</p>
-										<ul class="actions">
-											<li><a href="#" class="button big">Learn More</a></li>
-										</ul>
+										<p>輸入你想前往的地方,我們將在範圍內顯示附近人口密度,讓你可以清楚知道附近人口密度,然後你可以在旁邊選擇歷史紀錄ˋ路線規劃等功能</p>
+<BR><p>紅色外圈圈 : 表示範圍 可任意調整</p>
+<p>圈圈分別表示人數 : 紅(>50) 橙(>300) 黃(>400) 藍(>500) 靛(>600) 紫(>700)</p>
+
 									</div>
 									<body >
 		                                                         <!-- 地图画板 -->
@@ -115,7 +115,7 @@
 
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 24.1788155, lng: 120.6445167},
+    center: {lat: 24.178869, lng: 120.645509},
     zoom: 18,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   });
@@ -144,13 +144,12 @@ function initAutocomplete() {
     var bounds = new google.maps.LatLngBounds();
     places.forEach(function(place) {
       var icon = {
-        url: place.icon,
+        image:"http://labs.google.com/ridefinder/images/mm_20_red.png",
         size: new google.maps.Size(17, 17),
         origin: new google.maps.Point(0, 0),
         anchor: new google.maps.Point(17, 34),
         scaledSize: new google.maps.Size(25, 25)
       };
-
       markers.push(new google.maps.Marker({
         map: map,
         icon: icon,
@@ -166,6 +165,132 @@ function initAutocomplete() {
     });
     map.fitBounds(bounds);
   });
+
+//圈圈部分
+//假的範圍
+var myCity1 = new google.maps.Circle({
+  map: map,
+  center:{lat: 24.178858, lng: 120.645710},
+  radius:120,
+  strokeColor:"#FF0000",
+  strokeOpacity:0.5,
+  strokeWeight:5,
+  fillColor:"#FFFFFF",
+  fillOpacity:0,
+  editable: true,
+});
+
+//紅
+var myCity1 = new google.maps.Circle({
+  map: map,
+  center:{lat: 24.179383, lng: 120.645708},
+  radius:10,
+  strokeColor:"	#F00078",
+  strokeOpacity:0.5,
+  strokeWeight:2,
+  fillColor:"#FF9797",
+  fillOpacity:0.4,
+});
+//橙
+var myCity2 = new google.maps.Circle({
+  map: map,
+  center:{lat: 24.178470, lng: 120.645705},
+  radius:10,
+  strokeColor:"#F75000",
+  strokeOpacity:0.5,
+  strokeWeight:2,
+  fillColor:"#FFA042",
+  fillOpacity:0.4,
+});
+//黃
+var myCity2 = new google.maps.Circle({
+  map: map,
+  center:{lat: 24.178829, lng: 120.646002},
+  radius:10,
+  strokeColor:"#EAC100",
+  strokeOpacity:0.5,
+  strokeWeight:2,
+  fillColor:"#FFFF6F",
+  fillOpacity:0.4,
+});
+//黃2
+var myCity7 = new google.maps.Circle({
+  map: map,
+  center:{lat: 24.179572, lng: 120.645076},
+  radius:10,
+  strokeColor:"#EAC100",
+  strokeOpacity:0.5,
+  strokeWeight:2,
+  fillColor:"#FFFF6F",
+  fillOpacity:0.4,
+});
+//綠
+var myCity3 = new google.maps.Circle({
+  map: map,
+  center:{lat: 24.179087, lng: 120.645079},
+  radius:10,
+  strokeColor:"#01B468",
+  strokeOpacity:0.5,
+  strokeWeight:2,
+  fillColor:"#4EFEB3",
+  fillOpacity:0.4,
+});
+//綠2
+var myCity6 = new google.maps.Circle({
+  map: map,
+  center:{lat: 24.177972, lng: 120.645713},
+  radius:10,
+  strokeColor:"#01B468",
+  strokeOpacity:0.5,
+  strokeWeight:2,
+  fillColor:"#4EFEB3",
+  fillOpacity:0.4,
+});
+//藍
+var myCity4 = new google.maps.Circle({
+  map: map,
+  center:{lat: 24.179142, lng: 120.646443},
+  radius:10,
+  strokeColor:"#0080FF",
+  strokeOpacity:0.5,
+  strokeWeight:2,
+  fillColor:"#A6FFFF",
+  fillOpacity:0.4,
+});
+//靛
+var myCity4 = new google.maps.Circle({
+  map: map,
+  center:{lat: 24.178721, lng: 120.646454},
+  radius:10,
+  strokeColor:"#0000FF",
+  strokeOpacity:0.5,
+  strokeWeight:2,
+  fillColor:"#0000FF",
+  fillOpacity:0.4,
+});
+//紫
+var myCity5 = new google.maps.Circle({
+  map: map,
+  center:{lat: 24.178869, lng: 120.645509},
+  radius:10,
+  strokeColor:"#984B4B",
+  strokeOpacity:0.5,
+  strokeWeight:2,
+  fillColor:"#B766AD",
+  fillOpacity:0.4,
+});
+//紫2
+var myCity6 = new google.maps.Circle({
+  map: map,
+  center:{lat: 24.178394, lng: 120.645088},
+  radius:10,
+  strokeColor:"#984B4B",
+  strokeOpacity:0.5,
+  strokeWeight:2,
+  fillColor:"#B766AD",
+  fillOpacity:0.4,
+});
+
 }
 
 
@@ -181,11 +306,7 @@ function initAutocomplete() {
 					<div id="sidebar">
 						<div class="inner">
 
-							<!-- Search -->
-								<section id="search" class="alt">
-									<form method="post" action="#">
-										<input type="text" name="query" id="query" placeholder="Search" />
-									</form>
+							
 								</section>
 
 							<!-- Menu -->
@@ -194,19 +315,28 @@ function initAutocomplete() {
 										<h2>Menu</h2>
 									</header>
 									<ul>
-										<li><a href="index.html">首頁</a></li>
-										<li><a href="generic.html">歷史紀錄</a></li>
-										<li><a href="elements.html">路線規劃</a></li>
-										<li>
-											<span class="opener">更新</span>
-											<ul>
-												<li><a href="#">Lorem Dolor</a></li>
-												<li><a href="#">Ipsum Adipiscing</a></li>
-												<li><a href="#">Tempus Magna</a></li>
-												<li><a href="#">Feugiat Veroeros</a></li>
-											</ul>
-										</li>
+										<li><a href="3.html">首頁</a></li>
+<li>
+												<span class="opener">歷史紀錄</span>
+												<ul>
+													<li><a href="#">顯示歷史紀錄</a></li>
+													<li><a href="#">刪除歷史紀錄</a></li>
+													<li><a href="#">尋找相同路徑</a></li>
+													<li><a href="#">QR code</a></li>
+													<li><a href="#">上傳歷史紀錄</a></li>
+												</ul>
+											</li>
+										<li><a href="3.html">路線規劃</a></li>
+										<li><a href="3.html">更新</a></li>
 										<li><a href="#">會員登入</a></li>
+										<FORM METHOD=POST ACTION="3.html">
+										帳號: <INPUT TYPE="text" NAME="account"><BR>
+										密碼: <INPUT TYPE="text" NAME="password"><BR>
+										<button type="button " onclick="alert('登入成功!')">送出</button>
+										</FORM>
+										<FORM METHOD=POST ACTION="註冊!!!.html">
+										<INPUT TYPE="submit" value="註冊">
+										</FORM>
 									</ul>
 								</nav>
 
