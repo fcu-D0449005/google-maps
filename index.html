@@ -25,7 +25,43 @@
 	                var map=new GMap2(document.getElementById("map_canvas"));					
 					//设置地图的中心坐标.
 	                map.setCenter(new GLatLng(24.1788155,120.6445167),17);
-
+                        map.addControl(new GSmallMapControl());  
+                        //允许用户在地图类型之间切换
+                        map.addControl(new GMapTypeControl()); 
+                        
+					//创建小图标    
+					var icon = new GIcon();    
+					//指定图标的小图片
+					icon.image = "http://labs.google.com/ridefinder/images/mm_20_red.png";    
+					//指定图标的阴影图片
+					icon.shadow = "http://labs.google.com/ridefinder/images/mm_20_shadow.png";    
+					//指定图标的图片大小
+					icon.iconSize = new GSize(12, 20);    
+					//指定阴影大小
+					icon.shadowSize = new GSize(22, 20);    
+					icon.iconAnchor = new GPoint(6, 20);    
+					icon.infoWindowAnchor = new GPoint(5, 1); 
+               
+                                        //随机的添加10个标记,且让这10个点在当前的地图范围之内    
+					var bounds = map.getBounds();    
+					var southWest = bounds.getSouthWest();    
+					var northEast = bounds.getNorthEast();    
+					var lngSpan = northEast.lng() - southWest.lng();    
+					var latSpan = northEast.lat() - southWest.lat();    
+					for (var i = 0; i < 100; i++) {    
+						//随机生成标注点的坐标
+						var point = new GLatLng(southWest.lat() + latSpan * Math.random(),    
+						                        southWest.lng() + lngSpan * Math.random());    
+						//指定标注点的图片
+						map.addOverlay(new GMarker(point, icon));    
+					}   
+	                
+	                //在地图上进行标注
+					var point = new GLatLng(24.1788155,120.6445167);
+					//创建GMarker实例
+					var marker = new GMarker(point,{draggable: true});
+					//将该标注添加至地图
+					map.addOverlay(marker);
 	            }
 	        }                
                </script>
