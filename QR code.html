@@ -1,0 +1,233 @@
+﻿<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>人口密度分佈圖</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+                  <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+.pac-container {
+  font-family: Roboto;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+    </style>
+    <title>Places Searchbox</title>
+    <style>
+      #target {
+        width: 345px;
+      }
+    </style>
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>第N組</strong> </a>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-medium"><span class="label">Medium</span></a></li>
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>QR code</h1>
+
+							
+										</header>
+
+										
+<img src="161112181734.jpg" alt="QR code" style="width:100px;height:100px;">
+										<ul class="actions">
+										</ul>
+									</div>
+									<body >
+		                                                       
+  
+<div>                                                                                          
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDfBOGETXVJAkLCCIyJElXYPsRzFbRi2Y&libraries=places&callback=initAutocomplete"
+         async defer></script>
+
+
+  <p>upload QRcode</p>
+  <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+
+
+  <input accept="image/*" id="uploadImage" type="file">
+  <img id="img" src="">
+  <script>
+    $("#uploadImage").change(function(){
+      readImage( this );
+    });
+ 
+    function readImage(input) {
+      if ( input.files && input.files[0] ) {
+        var FR= new FileReader();
+        FR.onload = function(e) {
+          //e.target.result = base64 format picture
+          $('#img').attr( "src", e.target.result );
+        };       
+        FR.readAsDataURL( input.files[0] );
+      }
+    }
+
+  </script>
+
+<div>
+<br>
+
+<input type="button" value="比對" onclick="location.href='比對.html'">
+
+
+
+
+
+	                                                                </body>
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Search -->
+								<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form>
+								</section>
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="3.html">首頁</a></li>
+											<li>
+												<span class="opener">歷史紀錄</span>
+												<ul>
+													<li><a href="https://myactivity.google.com/myactivity?hl=zh-TW&product=12"onclick="alert('注意 : 每筆歷史紀錄僅會儲存七天')">顯示歷史紀錄</a></li>
+													<li><a href="https://myactivity.google.com/myactivity?hl=zh-TW&product=12">刪除歷史紀錄</a></li>
+													<li><a href="尋找相同路徑.html">尋找相同路徑</a></li>
+													<li><a href="QR code.html">QR code</a></li>
+													<li><a href="上傳.html">上傳歷史紀錄</a></li>
+												</ul>
+											</li>
+										<li><a href="https://www.google.com.tw/maps?hl=zh-TW">路線規劃</a></li>
+										<li><a href="3.html">更新</a></li>
+										<li><a href="#">會員登入</a></li>
+										<FORM METHOD=POST ACTION="3.html">
+										帳號: <INPUT TYPE="text" NAME="account"><BR>
+										密碼: <INPUT TYPE="text" NAME="password"><BR>
+										<button type="button " onclick="alert('登入成功!')">送出</button>
+										
+										</FORM>
+										<FORM METHOD=POST ACTION="註冊!!!.html">
+										<INPUT TYPE="submit" value="註冊">
+										</FORM>
+										<p>注意 : 按送出即代表同意回傳授權碼給系統<p>
+									</ul>
+								</nav>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<p>請不要聯絡我們。</p>
+									<ul class="contact">
+										<li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
+										<li class="fa-phone">(000) 000-0000</li>
+										<li class="fa-home">1234 Somewhere Road #8254<br />
+										Nashville, TN 00000-0000</li>
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
