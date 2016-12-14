@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/google maps.iml" filepath="$PROJECT_DIR$/.idea/google maps.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/google-maps.iml" filepath="$PROJECT_DIR$/.idea/google-maps.iml" />
+>>>>>>> 3d8cd1779cc151c26efdaf6f8a8082028eb3cc1d
     </modules>
   </component>
 </project>
