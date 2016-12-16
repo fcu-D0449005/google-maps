@@ -27,7 +27,6 @@
   outline: none;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
-
 #pac-input {
   background-color: #fff;
   font-family: Roboto;
@@ -38,27 +37,22 @@
   text-overflow: ellipsis;
   width: 300px;
 }
-
 #pac-input:focus {
   border-color: #4d90fe;
 }
-
 .pac-container {
   font-family: Roboto;
 }
-
 #type-selector {
   color: #fff;
   background-color: #4d90fe;
   padding: 5px 11px 0px 11px;
 }
-
 #type-selector label {
   font-family: Roboto;
   font-size: 13px;
   font-weight: 300;
 }
-
     </style>
     <title>Places Searchbox</title>
     <style>
@@ -82,32 +76,43 @@ var min2 = Math.floor(Math.random()*7+12);
 var sec2 = Math.floor(Math.random()*60);  
 var min3 = Math.floor(Math.random()*6+10);  
 var sec3 = Math.floor(Math.random()*60);  
-
 </script> 
 </HEAD>
 <BODY>
-<h>推薦路線一</h><br>
-<img src="r1.jpg" alt="route 1" style="width:906px;height:456px;">
+
+<br>
+<h1>推薦路線:</h1>
+<br><h3>路線一: </h3>
 <script type="text/javascript">  
 for(var i=1;i<=1;i++){  
     document.write("需要花" + min1 + "分" + sec1 + "秒" + "<br />");  
-}  
-</script> 
-<br><br><br><h>路線二</h><br>
-<img src="r2.jpg" alt="route 2" style="width:906px;height:456px;">
+}
+</script>  
+<br>
+<img src="r1.jpg" alt="route 1" style="width:608px;height:648px;">
+
+
+<br><br><br><h3>路線二: </h3>
 <script type="text/javascript">  
 for(var i=1;i<=1;i++){  
     document.write("需要花" + min2 + "分" + sec2 + "秒" + "<br />");  
 }  
 </script> 
-<br><br><br><h>路線三</h><br>
-<img src="r3.jpg" alt="route 3" style="width:906px;height:456px;">
+<br>
+<img src="r2.jpg" alt="route 2" style="width:707px;height:630px;">
+
+</script> 
+<br><br><br><h3>路線三: </h3>
 <script type="text/javascript">  
 for(var i=1;i<=1;i++){  
     document.write("需要花" + min3 + "分" + sec3 + "秒" + "<br />");  
-}  
+} 
 </script> 
+<br>
+<img src="r3.jpg" alt="route 3" style="width:638px;height:669px;">
+<br><br>
   <input type="button" value="返回主畫面" onclick=window.location.href="3.html">
   <input type="button" value="返回上一頁" onclick=window.location.href="路線規劃.html">
+<br><br>
 </BODY>
 </HTML>
