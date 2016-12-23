@@ -21,4 +21,6 @@ QR code<br>
 更新<br>
 會員登入(有用到後端php)<br>
 註冊<br>
-把網頁放到網路上(http://myweb.fcu.edu.tw/~d0449005/)<br>
+把網頁放到網路上<br>
+(http://myweb.fcu.edu.tw/~d0409888/<br>
+http://myweb.fcu.edu.tw/~d0449005/)<br>
